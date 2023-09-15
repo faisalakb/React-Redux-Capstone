@@ -1,5 +1,4 @@
 import React from 'react';
-import './HomePage.css';
 import Search from '../Search/SearchInput';
 import FilterRegion from '../Filter/FilterRegion';
 import CountryDetailes from '../Country/CountryDetail/CountryDetailes';
