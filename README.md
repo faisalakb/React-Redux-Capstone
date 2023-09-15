@@ -60,7 +60,7 @@ Overall, this project satisfies the stated requirements, and the deployed applic
 
 
 
-[Live Demo Link](https://react-redux-weather-app.onrender.com)
+[Live Demo Link](https://faisalakb.github.io/React-Redux-Capstone/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -92,7 +92,7 @@ Overall, this project satisfies the stated requirements, and the deployed applic
 
 > Please click the link below to check the demo
 
-- [Live Demo Link](https://react-redux-weather-app.onrender.com)
+- [Live Demo Link](https://faisalakb.github.io/React-Redux-Capstone/)
 - [Presentation Video Link](https://drive.google.com/file/d/1Dn3JlFKc13bD8KS0mVI5qha9xZCp51Xq/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -156,7 +156,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-Check here for live online version: https://react-redux-weather-app.onrender.com
+Check here for live online version: https://faisalakb.github.io/React-Redux-Capstone/
 
 <!--
 Example:
