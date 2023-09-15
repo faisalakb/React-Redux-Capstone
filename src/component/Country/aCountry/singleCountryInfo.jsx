@@ -22,8 +22,6 @@ const SingleCountryInfo = () => {
     }
   }, [dispatch, code, error]);
 
-  console.log(singleCountryInfo);
-
   let content;
 
   if (loading) {

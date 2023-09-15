@@ -1,19 +1,17 @@
 
 .inp {
-    border: 1px solid #ccc; 
-    border-radius: 4px;
-    margin-top: 20px;
-    width: 100%;
-    height: 20px;
-    padding: 10px; 
-    font-size: 1rem;
-    outline: none; 
-    transition: border-color 0.2s ease; 
-  }
-  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 20px;
+  width: 100%;
+  height: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
 
-  .inp:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
-  }
-  
+.inp:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
