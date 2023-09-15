@@ -16,10 +16,10 @@ describe('App Component', () => {
       </Provider>,
     );
 
-    // Replace the text below with the content you expect to be rendered
-    const appElement = getByText('Find Country?'); // Replace with your expected content
+
+    const appElement = getByText('Find Country?');
     expect(appElement).toBeInTheDocument();
   });
 
-  // Add more test cases as needed
+
 });
