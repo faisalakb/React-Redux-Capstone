@@ -1,8 +1,14 @@
-.navContainer{
-    width:100%;
-    height: 10vh;
-    border: 2px solid green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navContainer {
+  width: 100%;
+  height: 10vh;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.navContainer h1 {
+  font-size: 1.5rem;
+  margin: 0;
 }
