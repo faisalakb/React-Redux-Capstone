@@ -6,7 +6,7 @@ import './FilterRegion.css';
 
 const FilterRegion = () => {
   const [regionData, setRegionData] = useState([]);
-  const [filter, setFilterRegion] = useState(''); // Initialize filter state with an empty string
+  const [filter, setFilterRegion] = useState('');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const FilterRegion = () => {
 
   const handleRegionChange = (e) => {
     const selectedRegion = e.target.value;
-    setFilterRegion(selectedRegion); // Update local state with selected region
-    dispatch(setRegion(selectedRegion)); // Dispatch the selected region
+    setFilterRegion(selectedRegion);
+    dispatch(setRegion(selectedRegion));
   };
 
   return (

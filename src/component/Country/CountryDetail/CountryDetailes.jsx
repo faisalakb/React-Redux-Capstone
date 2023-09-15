@@ -45,20 +45,19 @@ const CountryDetailes = () => {
           {searchCountry.length > 0 ? (
             searchCountry.map((currentItem) => (
               <Link key={currentItem.id} className="imgCont" to={`/${currentItem.cioc}`}>
-                <p>{currentItem.cioc}</p>
                 <img className="flag" src={currentItem.flags.png} alt={currentItem.flags.alt} />
                 <div className="flagInfo">
                   <h2>{currentItem.name.common}</h2>
                   <p>
-                    Region:
+                    <strong>    Region: </strong>
                     <span>{currentItem.region}</span>
                   </p>
                   <p>
-                    Capital:
+                    <strong>    Capital:</strong>
                     <span>{currentItem.capital}</span>
                   </p>
                   <p>
-                    Population:
+                    <strong>Population:</strong>
                     <span>{currentItem.population}</span>
                   </p>
                 </div>

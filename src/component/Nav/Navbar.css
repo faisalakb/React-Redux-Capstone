@@ -1,8 +1,18 @@
-.navContainer{
-    width:100%;
+/* Navbar.css */
+
+.navContainer {
+    width: 100%;
     height: 10vh;
-    border: 2px solid green;
+    background-color: #007bff; /* Set background color */
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    color: white; /* Set text color */
+  }
+  
+  /* Style the h1 text */
+  .navContainer h1 {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    margin: 0; /* Remove default margin */
+  }
+  

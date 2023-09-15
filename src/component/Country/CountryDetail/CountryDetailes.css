@@ -1,22 +1,61 @@
-.container{
-    border: 2px solid red;
-    display: inline-flex;
-    flex-direction: row;
-    column-gap: 50px;
-    row-gap: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.imgCont{
-    border: 2px solid grey;
-    display: flex;
-    flex-direction: column;
-    width:20%;
-    
+/* CountryDetailes.css */
 
+/* Style the container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust layout as needed */
+  gap: 20px; /* Adjust spacing between items */
+  padding: 10px; /* Add padding around the container */
 }
-.flag{
-    width:100%;
-    height:250px;
+
+/* Style each country item */
+.imgCont {
+  width: calc(50% - 10px); /* Adjust item width and spacing */
+  border: 2px solid #007bff; /* Add a border with the primary color */
+  border-radius: 8px; /* Round the corners */
+  padding: 20px; /* Add padding around each item */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  text-decoration: none; /* Remove underlines from links */
+  color: #333; /* Set text color */
+  transition: border-color 0.2s ease; /* Add transition effect for border color */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center text horizontally */
+  margin-top: -12px;
+}
+
+/* Style the item when hovering */
+.imgCont:hover {
+  border-color: #ff5722; /* Change the border color on hover */
+}
+
+/* Style the flag image */
+.flag {
+  width: 100%; /* Make all images the same width */
+  height: auto; /* Maintain aspect ratio for images */
+  max-height: 250px; /* Limit maximum height */
+  object-fit: cover; /* Cover the entire container with the image */
+  border-radius: 4px; /* Add some rounding to the image */
+  border:1px solid grey;
+}
+
+/* Style h2 and p elements within .flagInfo */
+.flagInfo h2,
+.flagInfo p {
+  margin: 10px 0; /* Adjust margins as needed */
+}
+
+/* Style the strong elements */
+strong {
+  color: #007bff; /* Set the color of strong elements */
+  font-weight: bold; /* Make strong text bold */
+}
+
+/* Make the text responsive */
+@media (max-width: 768px) {
+  .imgCont {
+    width: 100%; /* On smaller screens, make items take full width */
+  }
 }
