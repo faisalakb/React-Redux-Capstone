@@ -56,7 +56,7 @@ Overall, this project satisfies the stated requirements, and the deployed applic
 
 
  Mobile Version: 
-![image](https://github.com/harshi0102/react-redux-capstone/assets/108334376/51b785cc-be1d-42f8-afe3-052b044be49d)
+![image](https://github.com/faisalakb/React-Redux-Capstone/blob/react-capstone/asset/mobileVerion.png)
 
 
 
@@ -93,7 +93,7 @@ Overall, this project satisfies the stated requirements, and the deployed applic
 > Please click the link below to check the demo
 
 - [Live Demo Link](https://react-redux-weather-app.onrender.com)
-- [Presentation Video Link](https://drive.google.com/file/d/1QTdhj8jCfbODp5yRpK-q8zg2WLxSD-Tp/view?usp=sharing)
+- [Presentation Video Link](https://drive.google.com/file/d/1Dn3JlFKc13bD8KS0mVI5qha9xZCp51Xq/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
