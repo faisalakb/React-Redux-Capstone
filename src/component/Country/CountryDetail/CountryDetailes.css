@@ -1,0 +1,22 @@
+.container{
+    border: 2px solid red;
+    display: inline-flex;
+    flex-direction: row;
+    column-gap: 50px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.imgCont{
+    border: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    width:20%;
+    
+
+}
+.flag{
+    width:100%;
+    height:250px;
+}
