@@ -1,20 +1,22 @@
 <a name="readme-top"></a>
 
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
 
-<h1>React Single Page App</h1>
+  <h3><b>Find a Country?</b></h3>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Space Travelers ](#-Space-Travelers)
-    - [How to build the "BookStore" website](#how-to-build-the-bookstore-website)
-  - [🛠 Walk through ](#-walk-through-)
+- [📖 \[Find a Country App\] ](#-Find-a-Country-app)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
-    - [Tools ](#tools-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
-  - [🚀 Live Recording ](#-live-recording-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -22,132 +24,83 @@
     - [Usage](#usage)
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
-  - [Authors](#authors)
+  - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
   - [📝 License ](#-license-)
 
-# 📖 Space Travelers <a name="about-project"></a>
+<!-- PROJECT DESCRIPTION -->
 
-"Space Travelers" involves the development of a Single Page application using an external API.
-
-I have established the requisite development environment and tools for creating a React application. Subsequent to this, I will proceed with the actual application development in upcoming phases.
-
-Phase 1 - Setup Branch:
-
-The most straightforward approach to initiating a React application is through the utilization of Create React App (CRA), adhering to the instructions outlined in the provided [guide](https://create-react-app.dev/docs/getting-started/). The application must be capable of error-free execution within a web browser.
-
-Phase 2 - Setup2 Branch:
-
-All prerequisites for the second stage of the project, focused on Components, have been met. I have established a designated directory named "components" within the CRA setup, encompassing textual, visual, and stylistic resources. Within this directory, a new file named "Calculator.js" has been created. Subsequently, a React component has been developed to align with the provided design specifications.
-<!-- > Describe your project in 1 or 2 sentences. -->
-
-### How to build the "Space Travelers" website
-
-- 1. Use REACT to build single page application
-- 2. Apply Linters
-- 3. Use External APIs
-- 3. Use Redux
-
-## 🛠 Walk through <a name="walk-through"></a>
-
-<ul>
-  <li><a href="https://github.com/microverseinc/curriculum-react-redux/blob/main/group-project/project_space_travelers_hub.md">See the Project Requirement</a></li>
-  <li>If required you should personalize the content of your page. Choose a topic that is different than the one in the original design</li>
+# 📖 [Find a Country App] <a name="about-project"></a>
 
 
+
+I have created a single-page application (SPA) called "Find a Country App " that allows users to view the country and detailed information of countries around the world. The application is built with React and Redux, following the specified requirements.
+
+The Home page of the application displays a list of categories, which can be filtered based on parameters such as the Region name. Region names getting from the AccuWeather API. When a user clicks on a Region, they are navigated to the all countries belong to that region.
+
+On the Details page, the application retrieves data from the restcountries API to display detailed information about the selected country. Users can navigate back to the Home page by clicking the "Back" button.
+
+To ensure the quality of the application, I have created unit tests for the pure functions in the Redux code. API access has been mocked in the tests to prevent actual requests, and the connection to the Redux Store has also been mocked for isolated testing.
+
+The data retrieved from the API is stored in the Redux store, allowing for efficient management and access. A Filter stateless component is used to filter the data obtained from the API based on the specified parameters.
+
+Each page within the application, including the main page and individual item pages, has a unique route to enable proper navigation within the SPA.
+
+Finally, the project has been deployed and is accessible online, allowing users to access and interact with the Find a country application.
+
+Overall, this project satisfies the stated requirements, and the deployed application provides a user-friendly interface to explore and view  different countries.
+
+
+ Mobile Version: 
+![image](https://github.com/faisalakb/React-Redux-Capstone/blob/react-capstone/asset/mobileVerion.png)
+
+
+
+[Live Demo Link](https://reactreduxcap.onrender.com/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
-**_feature-One_**
-
-- Imeplementation of Basic Framework linters error free.
-- Implementation of <a href="https://github.com/microverseinc/curriculum-transversal-skills/blob/main/git-github/articles/gitflow.md">Gitflow</a>
-
-**_feature-two_**
-
-- Implementation of <a href="https://github.com/webpack/webpack">Webpack Framework</a>
-
-**_feature-three_**
-
-- We will create a Book Store single page Website for the visitor eloborating different options
-- Choose images, text, icons, fonts.
-- Set up the repository and tools has been done in feature-one, and feature-two
-
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Client Side / Front-End</summary>
-  <ul>
-    <li><a href="https://www.w3.org/html/">HTML</a></li>
-    <li><a href="https://www.w3.org/Style/CSS/">CSS</a></li>
-    <li><a href="https://www.javascript.com/">Javascript</a></li>
-    <li><a href="https://react.dev/">React</a></li>
-  </ul>
-</details>
 
 <details>
-  <summary>Server Side / Back-End</summary>
+  <summary>Client</summary>
   <ul>
-    <li><a href="https://www.json.org/json-en.html">JSON</a></li>
-    <!-- <li><a href=""> - </a></li>
-    <li><a href=""> - </a></li> -->
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li>Redux</li>
   </ul>
 </details>
 
 <!-- Features -->
 
-### Tools <a name="tools"></a>
-
-  <details>
-    <summary>Code Convention, Code Analysis</summary>
-      <ul>
-        <li><a href="https://eslint.org/">ESLint</a></li>
-        <li><a href="https://webhint.io/">Webhint</a></li>
-        <li><a href="https://stylelint.io/">Stylelint</a></li>
-        <li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en">Lighthouse</a></li>
-        <li><a href="https://www.npmjs.com/package/npm-check">node_modules checker</a></li>
-      </ul>
-  </details>
-  <details>
-    <summary>Version Control, CI/CD, Hosting Service</summary>
-      <ul>
-        <li><a href="https://pages.github.com/">Github Pages</a></li>
-        <li><a href="https://github.com/features/actions">Github Actions</a></li>
-        <li><a href="https://git-scm.com/">Git</a></li>
-      </ul>
-  </details>
-  <details>
-    <summary>IDE, Desktop Apps, Other Tools</summary>
-      <ul>
-        <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
-        <li><a href="https://desktop.github.com/">Github Desktop</a></li>
-        <li><a href="https://www.behance.net/">Behance</a></li>
-      </ul>
-  </details>
-
 ### Key Features <a name="key-features"></a>
 
-- Add new Book
-- Remove Book
-- Single page application
-- Dynamic page
-- Redux 
-- Styling
+- View all countries
+- Search by country
+- Select Region
+- Detail by country
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Coming Soon]
+> Please click the link below to check the demo
 
-## 🚀 Live Recording <a name="live-demo"></a>
+- [Live Demo Link](https://reactreduxcap.onrender.com/)
+- [Presentation Video Link](https://drive.google.com/file/d/1Dn3JlFKc13bD8KS0mVI5qha9xZCp51Xq/view?usp=sharing)
 
-[Coming Soon]
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
+
 
 To get a local copy up and running, follow these steps.
 
@@ -155,53 +108,68 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- git version 2.38.x
-- node.js version > 12.x
-- IDE
-- browser (chrome, firefox, edge, safari)
+- Web browser
+- Code editor
+- Good internet connection
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-```sh
-  cd Javascript-capston
 
-  git https://github.com/faisalakb/Space-Travelers
+
+```sh
+  cd my-folder
+  git clone https://github.com/faisalakb/React-Redux-Capstone
 ```
+
 
 ### Install
 
 Install this project with:
 
+
 ```sh
-  cd Javascript-capston
-  node npm install
+  cd react-redux-capstone
+  npm install
 ```
 
 ### Usage
 
 To run the project, execute the following command:
-npm start
+
+```sh
+  npm start
+```
+
 
 ### Run tests
 
 To run tests, run the following command:
-Run Github Actions Test
+
 
 ```sh
-  npx stylelint "**/*.{css,scss}"
-  npx eslint .
   npm test
+  Press a to run all test
 ```
+
 
 ### Deployment
 
-This project is deployed at github pages you can clone it here. [Please click to clone](coming soon)
+Check here for live online version: https://reactreduxcap.onrender.com/
+<!--
+Example:
+
+```sh
+
+```
+ -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Authors
+<!-- AUTHORS -->
+
+## 👥 Author <a name="authors"></a>
 
 👤 **Faisal Mumtaz**
 
@@ -210,45 +178,54 @@ This project is deployed at github pages you can clone it here. [Please click to
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/faisal-mumtaz-514a221a6/)
 
 
-
-👤 **Bett Enoch**
-
-- GitHub: [@bettenoch](https://github.com/Bettenoch)
-- Twitter: [@BybEnoch](https://twitter.com/BybEnoch)
-- LinkedIn: [@GeoIntelligence](https://www.linkedin.com/in/bett-kipngeno-enock-8b5153214/)
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Project 5: Full website.**
-- [ ] **Project 6: Tests (pair programming).**
-  
+- [ ] **[Add Desktop version]**
+- [ ] **[Add Cities detail]**
+- [ ] **[Add famous places to visit]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/faisalakb/Space-Travelers/issues).
+Feel free to check the [issues page](https://github.com/faisalakb/React-Redux-Capstone/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give a star to this repositiory.
+
+
+If you like this project...Please Give ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the Microverse full-stack curriculum for the inspiration and guidance.
+I would like to thank all who inspired us during the project:
+
+Original design idea by Nelson Sakwa on [Behance](https://www.behance.net/sakwadesignstudio).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LICENSE -->
+
 ## 📝 License <a name="license"></a>
 
-This project is under [MIT](https://github.com/faisalakb/Space-Travelers/blob/Dev/LICENSE) licensed.
+This project is [MIT](https://github.com/faisalakb/React-Redux-Capstone/blob/Dev/LICENSE) licensed.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

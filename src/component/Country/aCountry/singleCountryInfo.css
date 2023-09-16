@@ -1,0 +1,133 @@
+@media (max-width: 768px) {
+  .sContainer {
+    background-color: #007bff;
+    height: 100vh;
+  }
+
+  .cDetail {
+    margin-left: 10%;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background-color 0.2s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .imgConts {
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    transition: border-color 0.2s ease;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid grey;
+  }
+
+  .imgConts:hover {
+    border-color: #ff5722;
+  }
+
+  .flags {
+    width: 50%;
+    border-radius: 2px;
+  }
+
+  .flagInfos {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    column-gap: 10px;
+    row-gap: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .pops {
+    font-size: 10px;
+  }
+
+  .popInfos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sinfo {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: white;
+  }
+
+  .sinfo:nth-child(odd) {
+    background-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .sinfo:nth-child(even) {
+    background-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .sinfo span {
+    font-weight: bold;
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  .mapBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .mapBtn:hover {
+    background-color: #0056b3;
+  }
+
+  .mapBtn::before {
+    content: '\f08e';
+    margin-right: 5px;
+  }
+}
