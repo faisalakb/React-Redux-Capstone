@@ -2,7 +2,7 @@ import './singleCountryInfo.css';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import Iframe from 'react-iframe';
+
 import { searchCountry } from '../../../Redux/countries/countriesAction';
 
 const SingleCountryInfo = () => {
@@ -28,7 +28,11 @@ const SingleCountryInfo = () => {
   } else if (singleCountryInfo[0]) {
     content = (
       <div className="imgConts">
-        <img className="flags" src={singleCountryInfo[0].flags.png} alt={singleCountryInfo[0].flags.alt} />
+        <img
+          className="flags"
+          src={singleCountryInfo[0].flags.png}
+          alt={singleCountryInfo[0].flags.alt}
+        />
         <div className="flagInfos">
           <h4>{singleCountryInfo[0].name.common}</h4>
           <p className="popInfos">
@@ -56,6 +60,16 @@ const SingleCountryInfo = () => {
             <span>{singleCountryInfo[0].region}</span>
           </p>
           <p className="sinfo">
+            SubRegion:
+            <span>{singleCountryInfo[0].subregion}</span>
+          </p>
+
+          <p className="sinfo">
+            Area:
+            <span>{singleCountryInfo[0].area}</span>
+          </p>
+
+          <p className="sinfo">
             Capital:
             <span>{singleCountryInfo[0].capital}</span>
           </p>
@@ -63,14 +77,13 @@ const SingleCountryInfo = () => {
             Map:
             {singleCountryInfo[0].name.common}
           </h3>
-          <Iframe
-            url={singleCountryInfo[0].maps.googleMaps}
-            width="100%"
-            height="450px"
-            id="google-map-iframe"
-            display="initial"
-            position="relative"
-          />
+          <button
+            type="button"
+            className="mapBtn"
+            onClick={() => window.open(singleCountryInfo[0].maps.googleMaps, '_blank')}
+          >
+            Open Map in New Window
+          </button>
         </div>
       )}
     </div>

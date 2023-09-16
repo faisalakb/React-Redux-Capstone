@@ -53,7 +53,7 @@ const CountryDetailes = () => {
             <Link className="imgCont" to={`/${randomCountry.cioc}`}>
               <img className="flag" src={randomCountry.flags.png} alt={randomCountry.flags.alt} />
               <div className="flagInfo">
-                <h4>{randomCountry.name.common}</h4>
+                <h4 className="cName">{randomCountry.name.common}</h4>
                 <p className="popInfo">
                   <span>{randomCountry.population}</span>
                   <span className="pop">Population</span>
@@ -67,10 +67,11 @@ const CountryDetailes = () => {
             <div className="two-column">
               {remainingCountries.length > 0 ? (
                 remainingCountries.map((currentItem) => (
-                  <Link key={currentItem.id} className="imgCont" to={`/${currentItem.cioc}`}>
+                  <Link key={currentItem.id} className="imgCont1" to={`/${currentItem.cioc}`}>
                     <img className="flag" src={currentItem.flags.png} alt={currentItem.flags.alt} />
-                    <div className="flagInfo">
-                      <h6>{currentItem.name.common}</h6>
+                    <div className="flagInfo1">
+                      <p className="arrow">&#x279C;</p>
+                      <h4 className="cName">{currentItem.name.common}</h4>
                       <div className="popInfo">
                         <p className="pop">
                           <span>{currentItem.population}</span>
