@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import Iframe from 'react-iframe';
-import { searchCountry } from '../../../feature/countries/countriesAction';
-import NavBar from '../../Nav/NavBar';
+import { searchCountry } from '../../../Redux/countries/countriesAction';
 
 const SingleCountryInfo = () => {
   const dispatch = useDispatch();
@@ -28,34 +27,14 @@ const SingleCountryInfo = () => {
     content = <h1>Loading ...</h1>;
   } else if (singleCountryInfo[0]) {
     content = (
-      <div>
-        <img src={singleCountryInfo[0].flags.png} alt={singleCountryInfo[0].flags.alt} />
-        <div>
-          <h2>{singleCountryInfo[0].name.common}</h2>
-          <p>
-            Region:
-            <span>{singleCountryInfo[0].region}</span>
-          </p>
-          <p>
-            Capital:
-            <span>{singleCountryInfo[0].capital}</span>
-          </p>
-          <p>
-            Population:
+      <div className="imgConts">
+        <img className="flags" src={singleCountryInfo[0].flags.png} alt={singleCountryInfo[0].flags.alt} />
+        <div className="flagInfos">
+          <h4>{singleCountryInfo[0].name.common}</h4>
+          <p className="popInfos">
             <span>{singleCountryInfo[0].population}</span>
+            <span className="pops">Population</span>
           </p>
-          <h3 className="map">
-            Map :
-            {singleCountryInfo[0].name.common}
-          </h3>
-          <Iframe
-            url={singleCountryInfo[0].maps.googleMaps}
-            width="100%"
-            height="450px" // You can adjust the height as needed
-            id="google-map-iframe"
-            display="initial"
-            position="relative"
-          />
         </div>
       </div>
     );
@@ -64,13 +43,37 @@ const SingleCountryInfo = () => {
   }
 
   return (
-    <>
-      <NavBar />
+    <div className="sContainer">
       <Link to="/">
-        <button type="button">Back</button>
+        <button type="button">&laquo; Back</button>
       </Link>
+      <span className="cDetail">Country Details</span>
       {content}
-    </>
+      {singleCountryInfo[0] && (
+        <div>
+          <p className="sinfo">
+            Region:
+            <span>{singleCountryInfo[0].region}</span>
+          </p>
+          <p className="sinfo">
+            Capital:
+            <span>{singleCountryInfo[0].capital}</span>
+          </p>
+          <h3 className="map">
+            Map:
+            {singleCountryInfo[0].name.common}
+          </h3>
+          <Iframe
+            url={singleCountryInfo[0].maps.googleMaps}
+            width="100%"
+            height="450px"
+            id="google-map-iframe"
+            display="initial"
+            position="relative"
+          />
+        </div>
+      )}
+    </div>
   );
 };
 

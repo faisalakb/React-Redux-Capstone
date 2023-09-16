@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import { setRegion } from '../../feature/countries/countriesSlice';
+import { setRegion } from '../../Redux/countries/countriesSlice';
 import './FilterRegion.css';
 
 const FilterRegion = () => {
@@ -35,7 +35,7 @@ const FilterRegion = () => {
         value={filter}
         onChange={handleRegionChange}
       >
-        <option value="">Select a Region</option>
+        <option value="">Region</option>
         {regionData.map((region) => (
           <option key={region} value={region}>
             {region}

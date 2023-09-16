@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Search from '../../Search/SearchInput';
 import './CountryDetailes.css';
-import { showAllCountries } from '../../../feature/countries/countriesAction';
+import { showAllCountries } from '../../../Redux/countries/countriesAction';
 
 const CountryDetailes = () => {
-  const [filteredData, setFilteredData] = useState([]); // Add filtered data state
+  const [filteredData, setFilteredData] = useState([]);
   const dispatch = useDispatch();
 
   const {
@@ -14,7 +15,7 @@ const CountryDetailes = () => {
 
   const filterCountriesByRegion = (selectedRegion) => {
     if (selectedRegion === '') {
-      setFilteredData(data); // Show all countries when no region is selected
+      setFilteredData(data);
     } else {
       const filteredCountries = data.filter((country) => country.region === selectedRegion);
       setFilteredData(filteredCountries);
@@ -22,12 +23,10 @@ const CountryDetailes = () => {
   };
 
   useEffect(() => {
-    // Fetch data when the component mounts
     dispatch(showAllCountries());
   }, [dispatch]);
 
   useEffect(() => {
-    // Update the filtered data when data or region changes
     if (success) {
       filterCountriesByRegion(region);
     }
@@ -36,36 +35,57 @@ const CountryDetailes = () => {
   const searchCountry = filteredData.filter((term) => term.name.common.toLowerCase()
     .includes(findCountryData.toLowerCase()));
 
+  // Get a random country from the filtered list
+  const randomCountryIndex = Math.floor(Math.random() * searchCountry.length);
+  const randomCountry = searchCountry[randomCountryIndex];
+
+  // Remove the random country from the list
+  const remainingCountries = [...searchCountry];
+  remainingCountries.splice(randomCountryIndex, 1);
+
   return (
     <>
       {isLoading ? (
         <h1>Loading ...</h1>
       ) : (
         <div className="container">
-          {searchCountry.length > 0 ? (
-            searchCountry.map((currentItem) => (
-              <Link key={currentItem.id} className="imgCont" to={`/${currentItem.cioc}`}>
-                <img className="flag" src={currentItem.flags.png} alt={currentItem.flags.alt} />
-                <div className="flagInfo">
-                  <h2>{currentItem.name.common}</h2>
-                  <p>
-                    <strong>    Region: </strong>
-                    <span>{currentItem.region}</span>
-                  </p>
-                  <p>
-                    <strong>    Capital:</strong>
-                    <span>{currentItem.capital}</span>
-                  </p>
-                  <p>
-                    <strong>Population:</strong>
-                    <span>{currentItem.population}</span>
-                  </p>
-                </div>
-              </Link>
-            ))
-          ) : (
-            <p>No countries found.</p>
+          {randomCountry && (
+            <Link className="imgCont" to={`/${randomCountry.cioc}`}>
+              <img className="flag" src={randomCountry.flags.png} alt={randomCountry.flags.alt} />
+              <div className="flagInfo">
+                <h4>{randomCountry.name.common}</h4>
+                <p className="popInfo">
+                  <span>{randomCountry.population}</span>
+                  <span className="pop">Population</span>
+                </p>
+              </div>
+            </Link>
           )}
+          <Search />
+          {/* Display the remaining countries in a two-column layout */}
+          <div className="container">
+            <div className="two-column">
+              {remainingCountries.length > 0 ? (
+                remainingCountries.map((currentItem) => (
+                  <Link key={currentItem.id} className="imgCont" to={`/${currentItem.cioc}`}>
+                    <img className="flag" src={currentItem.flags.png} alt={currentItem.flags.alt} />
+                    <div className="flagInfo">
+                      <h6>{currentItem.name.common}</h6>
+                      <div className="popInfo">
+                        <p className="pop">
+                          <span>{currentItem.population}</span>
+                          <div>Population</div>
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                ))
+              ) : (
+                <p>No countries found.</p>
+              )}
+            </div>
+          </div>
+
         </div>
       )}
     </>

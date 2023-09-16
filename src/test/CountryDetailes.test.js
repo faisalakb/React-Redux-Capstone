@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
-import CountryDetailes from './CountryDetailes';
+import CountryDetailes from '../component/Country/CountryDetail/CountryDetailes';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);

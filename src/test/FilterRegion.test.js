@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import FilterRegion from './FilterRegion';
+import FilterRegion from '../component/Filter/FilterRegion';
 
 const mockStore = configureStore([]);
 
@@ -25,7 +25,7 @@ describe('FilterRegion Component', () => {
       </Provider>,
     );
 
-    const filterRegionComponent = screen.getByText('Select a Region');
+    const filterRegionComponent = screen.getByText('Region');
     expect(filterRegionComponent).toBeInTheDocument();
   });
 });

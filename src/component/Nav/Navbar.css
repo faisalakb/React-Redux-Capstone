@@ -1,7 +1,6 @@
 .navContainer {
   width: 100%;
-  height: 10vh;
-  background-color: #007bff;
+  background-color: var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
